@@ -3,7 +3,7 @@ const { exec } = require("node:child_process");
 function awaitDbConnection() {
 	exec(
 		"docker exec tab_db pg_isready -h localhost -U tab -d tab",
-		handleDbConnection,
+		handleDbConnection
 	);
 
 	function handleDbConnection(_error, stdout) {

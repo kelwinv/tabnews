@@ -2,7 +2,7 @@ import database from "infra/database";
 
 async function status(request, response) {
 	const connectionsData = await database.query(
-		`SELECT COUNT(*)::int FROM pg_stat_activity WHERE datname = '${process.env.POSTGRES_DB}';`,
+		`SELECT COUNT(*)::int FROM pg_stat_activity WHERE datname = '${process.env.POSTGRES_DB}';`
 	);
 	const pgVersionData = await database.query("SHOW server_version;");
 	const pgMaxConnectionsData = await database.query("SHOW max_connections;");
