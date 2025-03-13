@@ -31,16 +31,9 @@ module.exports = {
 				argsIgnorePattern: "^_",
 			},
 		],
+		"no-unused-vars": "off",
 		"react/react-in-jsx-scope": "off",
-		"no-unused-vars": [
-			"warn",
-			{
-				vars: "all",
-				varsIgnorePattern: "^_",
-				args: "after-used",
-				argsIgnorePattern: "^_",
-			},
-		],
+		"import/no-anonymous-default-export": "warn",
 	},
 	settings: {
 		react: {
