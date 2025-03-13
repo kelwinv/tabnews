@@ -1,6 +1,6 @@
 import { join } from "node:path";
 import migrationRunner from "node-pg-migrate";
-import database from "infra/database";
+import { database } from "infra/database";
 
 const GET = async (defaultMigrationConf, req, res) => {
 	const paddingMigrations = await migrationRunner(defaultMigrationConf);
